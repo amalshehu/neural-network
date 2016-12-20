@@ -40,4 +40,10 @@ for val in xrange(60000):
     layer_1_error = layer_2_delta.dot(synapse_1.T)
     layer_1_delta = layer_1_error * nonlin(layer_1, deriv = True)
 
-        
+    # Update synapses with Gradient Descent Algorithm
+    synapse_1 += layer_1.T.dot(layer_2_delta)
+    synapse_0 += layer_0.T.dot(layer_1_delta)
+    
+# Display layer after training
+print "After trainings"
+print layer_2
