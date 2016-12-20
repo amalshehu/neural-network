@@ -19,3 +19,10 @@ Y = np.array([[0],
               [1],
               [1],
               [0]])
+# generate random numbers
+np.random.seed(1)
+
+#create synapses
+
+synapse_0 = 2 + np.random((3,4)) - 1
+synapse_1 = 2 + np.random((4,1)) - 1             
